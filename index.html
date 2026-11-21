@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo - Seu Nome</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px auto; color: #333; max-width: 800px; }
+        .header { display: flex; align-items: center; gap: 20px; margin-bottom: 25px; }
+        .foto-perfil { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid rgb(75, 35, 35); }
+        .header-info h1 { color: #2c3e50; margin: 0 0 5px 0; }
+        h2 { color: #34495e; border-bottom: 2px solid #ecf0f1; padding-bottom: 5px; margin-top: 25px; }
+        .contato { font-size: 0.95em; color: #555; }
+        .cargo { font-weight: bold; color: #2c3e50; }
+        .data { font-style: italic; color: #777; font-size: 0.9em; }
+        ul { margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <!-- TRECHO NOVO: Botão para alterar a cor de fundo -->
+    <button id="btn-cor">Alterar Cor de Fundo</button>
+
+    <img src="data:image/jpeg;base64,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" alt="Foto de Perfil" class="foto-perfil">
+    <div class="header-info">
+        <h1>Seu Nome Completo</h1>
+        <div class="contato">
+            <p>E-mail: seu.email@exemplo.com | Telefone: (11) 98765-4321<br> Cidade - Estado<br> LinkedIn: linkedin.com/in/seunome | GitHub: github.com/seunome</p>
+        </div>
+    </div>
+    <h2>Resumo Profissional</h2>
+    <p>Profissional motivado com sólida experiência em sua área de atuação...</p>
+    <h2>Experiência Profissional</h2>
+    <div>
+        <p class="cargo">Cargo / Função Nome da Empresa</p>
+        <p class="data">Janeiro de 2023 O momento atual</p>
+        <ul>
+            <li>Principais responsabilidades, projetos realizados ou metas alcançadas na função.</li>
+            <li>Melhoria de processos internos utilizando metodologias eficientes.</li>
+        </ul>
+    </div>
+    <h2>Educação</h2>
+    <div>
+        <p class="cargo">Nome do Curso Superior ou Técnico</p>
+        <p class="data">Nome da Instituição de Ensino | Conclusão: 2022</p>
+    </div>
+    <h2>Habilidades</h2>
+    <ul>
+        <li>Habilidade Técnica 1 (Ex: HTML, CSS, JavaScript)</li>
+        <li>Habilidade Técnica 2 (Ex: Excel Avançado, Gestão de Projetos)</li>
+        <li>Competência Comportamental (Ex: Trabalho em equipe, Comunicação)</li>
+    </ul>
+
+    <!-- TRECHO NOVO: Botão para voltar ao topo da página -->
+    <button id="btn-topo">Voltar ao Topo</button>
+</body>
+</html>
+<script>
+    // Pegando os botões do HTML pelo ID
+const botaoTopo = document.getElementById("btn-topo");
+//— Procura na página (document) o elemento com o nome "btn-topo" e guarda na caixinha fixa botaoTopo.
+const botaoCor = document.getElementById("btn-cor");
+
+// Controla se a cor de fundo já foi trocada
+let fundoColorido = false;
+//— Cria uma caixinha que pode mudar (let). 
+// Ela começa como false (falso), 
+// porque o currículo começa com o fundo branco.
+
+// Faz a página rolar suavemente até o topo
+function voltarAoTopo() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+//— Cria a "receita" chamada voltarAoTopo. 
+// Dentro dela, window.scrollTo({ top: 0, behavior: "smooth" }) 
+// manda a janela (window) 
+// rolar até a posição zero (top: 0, o topo) de forma suave ("smooth").
+
+// Alterna a cor de fundo entre azul clarinho e branco
+function alterarCorDeFundo() { //— Cria a "receita" que troca a cor:
+  if (fundoColorido === false) { //— Pergunta: "O fundo ainda está branco?"
+//Se sim, pinta o fundo do corpo da página 
+    document.body.style.backgroundColor = "#d6eaf8";
+    fundoColorido = true;
+  } else {
+    document.body.style.backgroundColor = "#ffffff";
+    fundoColorido = false;
+  }
+}
+
+// Escuta o clique em cada botão
+botaoTopo.addEventListener("click", voltarAoTopo);
+//— Liga o botão do topo ao clique: quando clicar, roda voltarAoTopo.
+botaoCor.addEventListener("click", alterarCorDeFundo);
+</script>
